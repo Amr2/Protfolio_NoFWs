@@ -428,7 +428,73 @@
   z-index: 0;
 }
 
+.project-colm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.p-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 40%;
+  min-height: 40%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.p-card img {
+  max-width: 128px;
+  max-height: 128px;
+  border-radius: 50%;
+}
+
+.p-card .Head-text {
+  font-size: 1rem;
+}
+
+.p-card .Desc-text {
+  font-size: .7rem;
+  width: 25ch;
+}
+
 #About {
   gap: 50px;
+}
+
+#Project {
+  gap: 0;
+}
+
+#contact form {
+  min-width: 50%;
 }
 /*# sourceMappingURL=style.css.map */
