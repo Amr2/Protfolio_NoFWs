@@ -1,9 +1,16 @@
-$Dark-main-color : #202020;
-$White-main-color : #ffffff;
-$Dark-text-color : #121212;
-$White-text-color : #E0E0E0;
+:root{
+    --Dark-main-color : #202020;
+    --White-main-color : #ffffff;
+    --Dark-text-color : #121212;
+    --White-text-color : #E0E0E0;
+}
 
-
+.light{
+    --Dark-main-color:#ffffff;
+    --White-main-color : #202020;
+    --Dark-text-color : #E0E0E0;
+    --White-text-color : #121212;
+}
 
 *{
     box-sizing: border-box;
@@ -15,65 +22,70 @@ $White-text-color : #E0E0E0;
 
 // Theme Clases
 .White-theme-text{
-    color:$White-text-color;
+    color:var(--White-text-color);
 }
-.dark-theme-text{
-    color:$Dark-text-color;
-}
-.dark-BG{
-    background: $Dark-main-color;
-}
+
 .white-BG{
-    background: $White-main-color;
+    background: var(--White-main-color);
 }
 .white-shadow{
     box-shadow: 0px 4px 4px rgba(172, 172, 172, 0.534);
 }
+
+.white-menubtn{
+    fill: var(--White-main-color) !important;
+}
+
+
+.menu-White-Rborder{
+    border-right: 1px solid var(--White-text-color);
+}
+.WhiteSB::-webkit-scrollbar {
+    width: 17px;
+    background: var(--Dark-main-color);
+}
+.WhiteSB::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px var(--Dark-main-color);
+    border: solid 3px transparent;
+}
+
+.WhiteSB::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 15px 15px var(--White-main-color);
+    border: solid 3px transparent;
+    border-radius: 30px;
+}
+
+
+
+.dark-theme-text{
+    color:var(--Dark-text-color);
+}
+.dark-BG{
+    background: var(--Dark-main-color);
+}
 .dark-shadow{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
 }
-.white-menubtn{
-    fill: $White-main-color !important;
-}
-
 .Dark-menubtn{
-    fill: $Dark-main-color !important;
-}
-.menu-White-Rborder{
-    border-right: 1px solid $White-text-color;
+    fill: var(--Dark-main-color) !important;
 }
 
 .menu-Dark-Rborder{
-    border-right: 1px solid $Dark-text-color;
+    border-right: 1px solid var(--Dark-text-color);
 }
 
 // customize the scrollbar
 .DarkSB::-webkit-scrollbar {
     width: 17px;
-    background: $White-main-color;
+    background: var(--White-main-color);
 }
 .DarkSB::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px 10px $White-main-color;
+    box-shadow: inset 0 0 10px 10px var(--White-main-color);
     border: solid 3px transparent;
 }
 
 .DarkSB::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 15px 15px $Dark-main-color;
-    border: solid 3px transparent;
-    border-radius: 30px;
-}
-
-.WhiteSB::-webkit-scrollbar {
-    width: 17px;
-    background: $Dark-main-color;
-}
-.WhiteSB::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px 10px $Dark-main-color;
-    border: solid 3px transparent;
-}
-
-.WhiteSB::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 15px 15px $White-main-color;
+    box-shadow: inset 0 0 15px 15px var(--Dark-main-color);
     border: solid 3px transparent;
     border-radius: 30px;
 }
