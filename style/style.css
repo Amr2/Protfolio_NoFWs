@@ -370,7 +370,7 @@
           align-items: center;
   height: 80%;
   gap: 48px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .about-colm p {
@@ -491,6 +491,7 @@
 }
 
 #Project {
+  margin-top: 4rem;
   gap: 0;
 }
 
