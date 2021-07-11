@@ -4,6 +4,8 @@ let closebtn = document.getElementById("close");
 let D_btn    = document.getElementById("download");
 
 
+
+
 closebtn.addEventListener("click", ()=> {
     menu.style.left  = "-100%";
     menubtn.style.opacity = "100%"
@@ -31,3 +33,4 @@ menubtn.addEventListener("click", ()=>{
     menubtn.style.opacity = "0%";
     menubtn.style.visibility = "hidden";
 })
+

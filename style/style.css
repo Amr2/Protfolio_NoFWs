@@ -234,7 +234,7 @@
           align-items: center;
   height: 100vh;
   gap: 45px;
-  width: 99%;
+  width: 35%;
   -webkit-transition: left 500ms ease-in-out;
   transition: left 500ms ease-in-out;
   z-index: 1000;
