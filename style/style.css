@@ -512,4 +512,10 @@
 #contact form {
   min-width: 50%;
 }
+
+#theme {
+  position: fixed;
+  left: 5%;
+  top: 90%;
+}
 /*# sourceMappingURL=style.css.map */

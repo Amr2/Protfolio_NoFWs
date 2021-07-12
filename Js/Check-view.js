@@ -11,9 +11,11 @@ theme_changer.addEventListener("click",()=>{
     for (const elem of document.querySelectorAll(".logo-img")) {
         if(elem.src.split("/")[4][0]=="W"){
             elem.src= "./assets/D-logo-AM-512.svg";
+            theme_changer.innerHTML = `<i class="fas fa-sun fa-2x"></i>`
         }
         else{
             elem.src= "./assets/W-logo-AM-512.svg";
+            theme_changer.innerHTML = `<i class="fas fa-moon fa-2x"></i>`
         }
     }
 });
