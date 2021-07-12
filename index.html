@@ -31,17 +31,17 @@
         <!-- home section -->
         <div class="section" id="home">
             <div id="top-logo" class="top-logoAm">
-                <a href="#home" style="width: inherit;"><img src="./assets/W-logo-AM-512.svg" alt="" srcset="" style="width: inherit;" ></a>
+                <a href="#home" style="width: inherit;"><img src="./assets/W-logo-AM-512.svg" alt="" srcset="" style="width: inherit;"  class="logo-img"></a>
             </div>
             
             <div id="logo">
-                <img src="./assets/W-logo-AM-512.svg" alt="" srcset="" width="128" >
+                <img src="./assets/W-logo-AM-512.svg" alt="" srcset="" width="128" class="logo-img">
             </div>
             <div>
                 <h1 class="Head-text White-theme-text">Amr Mahmoud</h1>
                 <p class="subH-text White-theme-text"> I am a Front-End Developer </p>
             </div>
-            <button class="btn prim-btn Dark-theme-text white-BG subH-text" id="download"> Download my CV</button>
+            <button class="btn prim-btn dark-theme-text white-BG subH-text" id="download"> Download my CV</button>
             <div class="social">
                 <a href="https://facebook.com/profile.php?id=100068497200573" target="_blank">
                     <div class="btn social-btn Dark-BG White-theme-text white-shadow">f</div>
@@ -60,7 +60,7 @@
         <div class="section" id="About">
             <h1 class="Head-text White-theme-text">About Me</h1>
             <div class="about-colm ">
-                <img src="./assets/D-logo-AM-512.svg" alt="my pic" class="white-BG">
+                <img src="./assets/D-logo-AM-512.svg" alt="my pic" class="logo-img white-BG">
                 <p class="subH-text White-theme-text">
                     An Entry-level Front End Developer with less than 1-year of experience building and maintaining.
 
@@ -109,15 +109,14 @@
             <h1 class="Head-text White-theme-text">Contact Me</h1>
             <form action="" method="POST" id="contact-form" you-sniky-sniky-MF="go fken away" >
                 <div class="colm">
-                    <input type="text" name="Email" id="Email" class="white-BG subH-text Dark-theme-text" placeholder="Email" aria-placeholder="Enter your Email" maxlength="100"  minlength="10">
-                    <input type="text" name="subject" id="Subject" class="white-BG subH-text Dark-theme-text" placeholder="Subject" aria-placeholder="Enter your Subject" maxlength="100" minlength="10">
-                    <textarea name="Email-cont" id="Email-cont" cols="30" rows="10" class="white-BG Desc-text Dark-theme-text" placeholder="Email-contant" aria-placeholder="Enter the Email content" maxlength="1000" minlength="100" ></textarea>
+                    <input type="text" name="Email" id="Email" class="white-BG subH-text dark-theme-text" placeholder="Email" aria-placeholder="Enter your Email" maxlength="100"  minlength="10">
+                    <input type="text" name="subject" id="Subject" class="white-BG subH-text dark-theme-text" placeholder="Subject" aria-placeholder="Enter your Subject" maxlength="100" minlength="10">
+                    <textarea name="Email-cont" id="Email-cont" cols="30" rows="10" class="white-BG Desc-text dark-theme-text" placeholder="Email-contant" aria-placeholder="Enter the Email content" maxlength="1000" minlength="100" ></textarea>
                     <div class="btn-cont">
-                        <input type="submit" class="btn prim-btn dark-shadow" value="Send">
+                        <input type="submit" class="btn prim-btn dark-shadow white-BG dark-theme-text" value="Send">
                         <div class="btn sec-btn dark-BG white-shadow White-theme-text">Clear</div>
                     </div>
                 </div>
-                
             </form>
 
         </div>
@@ -130,9 +129,13 @@
                 <rect y="25" width="30" height="6" rx="4" />
             </svg>        
         </div>
+        <div class="theme-btn White-theme-text" id = "theme">
+            <i class="fas fa-moon "></i>
+        </div>
     </div>
 
     <script src="./Js/utily.js"></script>
     <script src="./Js/Check-view.js"></script>
+    <script src="https://kit.fontawesome.com/85e0e25968.js" crossorigin="anonymous"></script>
 </body>
 </html>

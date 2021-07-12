@@ -1,12 +1,12 @@
 :root {
   --Dark-main-color: #202020;
-  --White-main-color: #ffffff;
+  --White-main-color: #ebebeb;
   --Dark-text-color: #121212;
   --White-text-color: #E0E0E0;
 }
 
 .light {
-  --Dark-main-color:#ffffff;
+  --Dark-main-color:#ebebeb;
   --White-main-color: #202020;
   --Dark-text-color: #E0E0E0;
   --White-text-color: #121212;
