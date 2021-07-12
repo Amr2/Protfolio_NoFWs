@@ -6,22 +6,36 @@ const view_check   = window.matchMedia("(max-width: 500px)");
 
 
 theme_changer.addEventListener("click",()=>{
+    theme_changer.classList.toggle("click");
+    theme_changer.disabled = true;
+    setTimeout(()=>{
+        document.body.classList.toggle("light");
+        for (const elem of document.querySelectorAll(".logo-img")) {
+            if(elem.src.split("/")[4][0]=="W"){
+                elem.src= "./assets/D-logo-AM-512.svg";
+                theme_changer.innerHTML = `<i class="fas fa-sun fa-2x"></i>`;
+                theme_changer.classList.toggle("past-click");
+            }
+            else{
+                elem.src= "./assets/W-logo-AM-512.svg";
+                theme_changer.innerHTML = `<i class="fas fa-moon fa-2x"></i>`;
+                theme_changer.classList.toggle("past-click");
+            }
+        }    
+    },1010);
 
-    document.body.classList.toggle("light");
-    for (const elem of document.querySelectorAll(".logo-img")) {
-        if(elem.src.split("/")[4][0]=="W"){
-            elem.src= "./assets/D-logo-AM-512.svg";
-            theme_changer.innerHTML = `<i class="fas fa-sun fa-2x"></i>`
-        }
-        else{
-            elem.src= "./assets/W-logo-AM-512.svg";
-            theme_changer.innerHTML = `<i class="fas fa-moon fa-2x"></i>`
-        }
-    }
+    setTimeout(()=>{
+        theme_changer.classList.toggle("past-click");
+        theme_changer.classList.toggle("click");
+        theme_changer.disabled = false;
+    },2010);
+
+    
 });
 
 
 const update_view = (view)=>{
+    
     if(view.matches){
         menu.style.width = "100%";
         for(let tempelem of document.getElementById("menu").children){
