@@ -517,5 +517,6 @@
   position: fixed;
   left: 5%;
   top: 90%;
+  z-index: 10000;
 }
 /*# sourceMappingURL=style.css.map */
