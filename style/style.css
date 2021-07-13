@@ -256,9 +256,15 @@
   z-index: 1000;
 }
 
-.Menu > a {
+.Menu a {
   text-decoration: none;
+  opacity: .7;
+  text-transform: uppercase;
   font-size: 2rem;
+}
+
+.Menu a:hover {
+  opacity: 1;
 }
 
 .close-btn {
@@ -389,12 +395,12 @@
   padding: 1rem;
 }
 
-.about-colm p {
+.about-colm div {
   height: 80%;
   font-size: 1.3rem;
   padding: 0 0 0 3rem;
   text-align: left;
-  line-height: 1.7rem;
+  line-height: 2rem;
 }
 
 .about-colm img {
@@ -692,7 +698,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media all and (min-width: 1000px) {
   .about-colm {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -702,16 +708,16 @@
     padding: 2rem;
     margin: auto 0;
   }
-  .about-colm p {
+  .about-colm div {
     height: 100%;
-    line-height: 3rem;
+    line-height: 2.75rem;
   }
   .about-colm img {
     width: 400px;
   }
 }
 
-@media (min-width: 1300px) {
+@media all and (min-width: 1300px) {
   .about-colm {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -721,12 +727,15 @@
     padding: 2rem;
     margin: auto 0;
   }
-  .about-colm p {
+  .about-colm div {
     height: 100%;
     width: 70ch;
-    line-height: 4rem;
     font-size: 1.5rem !important;
     padding-left: 3rem;
+  }
+  .about-colm div p {
+    margin-top: 2.75rem;
+    line-height: 2rem;
   }
   .about-colm img {
     width: 50%;

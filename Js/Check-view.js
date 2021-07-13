@@ -33,23 +33,26 @@ theme_changer.addEventListener("click",()=>{
     
 });
 
+const  add_eve = ()=> {
+    menu.style.left  = "-100%";
+    menubtn.style.opacity = "100%"
+    menubtn.style.visibility = "visible";
+}
 
 const update_view = (view)=>{
     
     if(view.matches){
         menu.style.width = "100%";
         for(let tempelem of document.getElementById("menu").children){
-            tempelem.addEventListener("click", ()=> {
-                menu.style.left  = "-100%";
-                menubtn.style.opacity = "100%"
-                menubtn.style.visibility = "visible";
-            });
+            tempelem.addEventListener("click", add_eve );
         }
     }
     else{
         menu.style.width = "35%";
+        for(let tempelem of document.getElementById("menu").children){
+            tempelem.removeEventListener("click", add_eve );
     }
-};
+}};
 
 logo_obv = new IntersectionObserver((elem)=>{
     
