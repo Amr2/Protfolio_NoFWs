@@ -2,7 +2,7 @@ let logo           = document.querySelector("#logo");
 let sec_log        = document.getElementById("top-logo"); 
 let theme_changer  = document.getElementById("theme"); 
 
-const view_check   = window.matchMedia("(max-width: 500px)");
+const view_check   = window.matchMedia("(max-width: 650px)");
 
 
 theme_changer.addEventListener("click",()=>{
