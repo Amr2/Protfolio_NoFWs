@@ -741,4 +741,10 @@
     width: 50%;
   }
 }
+
+@media all and (max-height: 650px) {
+  .about-colm div {
+    line-height: 1.79rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
