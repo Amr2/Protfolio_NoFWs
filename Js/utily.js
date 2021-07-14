@@ -101,8 +101,8 @@ clr_btn.addEventListener("click",()=>{
 sen_btn.addEventListener("click",()=>{
     sen_btn.disabled = true;
     Email.send({
-        SecureToken:"1dafff04-deb8-4a2d-8c0e-89887db111ba",
-        To : "AAkalit22@outlook.com",
+        SecureToken:"9e7c5320-bc54-4382-b574-b4cff1c94a79",
+        To : "amr-sender2021@outlook.com",
         From : email_fild.value ,
         Subject : subj_fild.value,
         Body : cont_fild.value
@@ -112,7 +112,6 @@ sen_btn.addEventListener("click",()=>{
             email_fild.value = "";
             subj_fild.value  = "";
             cont_fild.value  = "";
-            
         } 
     );    
 
