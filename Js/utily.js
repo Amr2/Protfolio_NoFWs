@@ -10,7 +10,6 @@ let sen_btn    = document.getElementById("send-btn");
 let clr_btn    = document.getElementById("clear-btn");
 
 
-
 closebtn.addEventListener("click", ()=> {
     menu.style.left  = "-100%";
     menubtn.style.opacity = "100%"
@@ -102,7 +101,7 @@ clr_btn.addEventListener("click",()=>{
 sen_btn.addEventListener("click",()=>{
     sen_btn.disabled = true;
     Email.send({
-        SecureToken:"5c51837f-8d88-47d1-b9d4-47a823c59ca1",
+        SecureToken:"1dafff04-deb8-4a2d-8c0e-89887db111ba",
         To : "AAkalit22@outlook.com",
         From : email_fild.value ,
         Subject : subj_fild.value,
@@ -119,4 +118,5 @@ sen_btn.addEventListener("click",()=>{
 
 })
 
-// console.log(process.env.ENV_HOST,process.env.ENV_USERNAME,process.env.ENV_PASSWORD,process.env.ENV_RESIVER);
+
+// 5c51837f-8d88-47d1-b9d4-47a823c59ca1
