@@ -2,7 +2,12 @@ let menubtn  = document.getElementById("menu-btn");
 let menu     = document.getElementById("menu");
 let closebtn = document.getElementById("close");
 let D_btn    = document.getElementById("download");
-
+// Form Section
+let email_fild = document.getElementById("Email");
+let subj_fild  = document.getElementById("Subject");
+let cont_fild  = document.getElementById("Email-cont");
+let sen_btn    = document.getElementById("send-btn");
+let clr_btn    = document.getElementById("clear-btn");
 
 
 
@@ -34,3 +39,84 @@ menubtn.addEventListener("click", ()=>{
     menubtn.style.visibility = "hidden";
 })
 
+
+
+
+email_fild.addEventListener("change",()=>{
+    if( email_fild.value.length > 100){
+        email_fild.value = " Nope the maximum length is 100 :D "
+        email_fild.style.outline= " #a04b4b solid 2px";
+    }
+    else{
+        email_fild.style.outline = "none"
+    }
+    if((cont_fild.value.length >= 100 && cont_fild.value.length <=1000) && (email_fild.value.length >= 10 && email_fild.value.length <=100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <=100)){
+        sen_btn.disabled = false;
+    }
+    else{
+        sen_btn.disabled = true;
+    }
+    
+});
+
+subj_fild.addEventListener("change",()=>{
+    if( subj_fild.value.length > 100){
+        subj_fild.value = " Nope the maximum length is 100 :D "
+        subj_fild.style.outline= " #a04b4b solid 2px";
+    }
+    else{
+        subj_fild.style.outline = "none"
+    }
+    if((cont_fild.value.length >= 100 && cont_fild.value.length <= 1000) && (email_fild.value.length >= 10 && email_fild.value.length <= 100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <= 100)){
+        sen_btn.disabled = false;
+    }
+    else{
+        sen_btn.disabled = true;
+    }    
+});
+
+
+cont_fild.addEventListener("change",()=>{
+    if( cont_fild.value.length > 1000){
+        cont_fild.value = " Nope the maximum length is 100 :D "
+        cont_fild.style.outline= " #a04b4b solid 2px";
+    }
+    else{
+        cont_fild.style.outline = "none"
+    }
+    if((cont_fild.value.length >= 100 && cont_fild.value.length <= 1000) && (email_fild.value.length >= 10 && email_fild.value.length <=100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <=100)){
+        sen_btn.disabled = false;
+    }
+    else{
+        sen_btn.disabled = true;
+    }
+});
+
+clr_btn.addEventListener("click",()=>{
+    email_fild.value = "";
+    subj_fild.value  = "";
+    cont_fild.value  = "";
+    sen_btn.disabled = true;
+})
+
+sen_btn.addEventListener("click",()=>{
+    sen_btn.disabled = true;
+    Email.send({
+        Host : process.env.ENV_HOST,
+        Username : process.env.ENV_USERNAME,
+        Password : process.env.ENV_PASSWORD,
+        To : process.env.ENV_RESIVER,
+        From : email_fild.value ,
+        Subject : subj_fild.value,
+        Body : cont_fild.value
+    }).then(
+        (message) =>{
+            alert(message)
+            email_fild.value = "";
+            subj_fild.value  = "";
+            cont_fild.value  = "";
+            
+        } 
+    );    
+
+})

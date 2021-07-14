@@ -139,6 +139,8 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: all 500ms ease-in-out !important;
+  transition: all 500ms ease-in-out !important;
 }
 
 .btn:hover {
@@ -155,6 +157,12 @@
 
 .btn:focus-visible {
   text-decoration: underline;
+}
+
+.btn:disabled {
+  text-decoration: none;
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 .social-btn {
