@@ -102,10 +102,8 @@ clr_btn.addEventListener("click",()=>{
 sen_btn.addEventListener("click",()=>{
     sen_btn.disabled = true;
     Email.send({
-        Host : process.env.ENV_HOST,
-        Username : process.env.ENV_USERNAME,
-        Password : process.env.ENV_PASSWORD,
-        To : process.env.ENV_RESIVER,
+        SecureToken:"5c51837f-8d88-47d1-b9d4-47a823c59ca1",
+        To : "AAkalit22@outlook.com",
         From : email_fild.value ,
         Subject : subj_fild.value,
         Body : cont_fild.value
@@ -120,3 +118,5 @@ sen_btn.addEventListener("click",()=>{
     );    
 
 })
+
+// console.log(process.env.ENV_HOST,process.env.ENV_USERNAME,process.env.ENV_PASSWORD,process.env.ENV_RESIVER);
