@@ -22,7 +22,7 @@ const message_states = (state ,m)=>{
     }
     else{
         emil_cont.children[0].children[0].innerHTML = "Error"
-        emil_cont.children[0].children[1].innerHTML = `Opps There is Something went Wrong.<br>if the issue with the system.<br>so please Help Me and send the error message<br>vie any of my social accounts Thank you<br> ${m}`
+        emil_cont.children[0].children[1].innerHTML = `Opps There is Something went Wrong.<br>if the issue with the system.<br>so please Help Me and send the error message<br>vie any of my social accounts Thank you<br>  <span style= " color :rgb(131, 38, 38);"> ${m} </span> `
     }
 }
 
@@ -68,8 +68,13 @@ email_fild.addEventListener("change",()=>{
         email_fild.value = " Nope the maximum length is 100 :D "
         email_fild.style.outline= " #a04b4b solid 2px";
     }
+    else if(email_fild.value.length < 10 ){
+        document.getElementById("E-lable").innerHTML=`The minimum length of the subject is 10 character`;
+        email_fild.style.outline= "#a04b4b solid 2px";
+    }
     else{
-        email_fild.style.outline = "none"
+        email_fild.style.outline = "none";
+        document.getElementById("E-lable").innerHTML="";
     }
     if((cont_fild.value.length >= 100 && cont_fild.value.length <=1000) && (email_fild.value.length >= 10 && email_fild.value.length <=100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <=100)){
         sen_btn.disabled = false;
@@ -83,11 +88,17 @@ email_fild.addEventListener("change",()=>{
 subj_fild.addEventListener("change",()=>{
     if( subj_fild.value.length > 100){
         subj_fild.value = " Nope the maximum length is 100 :D "
-        subj_fild.style.outline= " #a04b4b solid 2px";
+        subj_fild.style.outline= "#a04b4b solid 2px";
+    }
+    else if(subj_fild.value.length < 10 ){
+        document.getElementById("S-lable").innerHTML=`The minimum length of the subject is 10 character`;
+        subj_fild.style.outline= "#a04b4b solid 2px";
     }
     else{
-        subj_fild.style.outline = "none"
+        subj_fild.style.outline = "none";
+        document.getElementById("S-lable").innerHTML="";
     }
+
     if((cont_fild.value.length >= 100 && cont_fild.value.length <= 1000) && (email_fild.value.length >= 10 && email_fild.value.length <= 100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <= 100)){
         sen_btn.disabled = false;
     }
@@ -102,8 +113,13 @@ cont_fild.addEventListener("change",()=>{
         cont_fild.value = " Nope the maximum length is 100 :D "
         cont_fild.style.outline= " #a04b4b solid 2px";
     }
+    else if(cont_fild.value.length < 10 ){
+        document.getElementById("Cont-lable").innerHTML=`The minimum length of the subject is 100 character`;
+        cont_fild.style.outline= "#a04b4b solid 2px";
+    }
     else{
-        cont_fild.style.outline = "none"
+        cont_fild.style.outline = "none";
+        document.getElementById("Cont-lable").innerHTML=""
     }
     if((cont_fild.value.length >= 100 && cont_fild.value.length <= 1000) && (email_fild.value.length >= 10 && email_fild.value.length <=100)  && (subj_fild.value.length >= 10 && subj_fild.value.length <=100)){
         sen_btn.disabled = false;
