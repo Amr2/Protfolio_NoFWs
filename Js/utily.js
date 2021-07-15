@@ -113,7 +113,7 @@ cont_fild.addEventListener("change",()=>{
         cont_fild.value = " Nope the maximum length is 100 :D "
         cont_fild.style.outline= " #a04b4b solid 2px";
     }
-    else if(cont_fild.value.length < 10 ){
+    else if(cont_fild.value.length < 100 ){
         document.getElementById("Cont-lable").innerHTML=`The minimum length of the subject is 100 character`;
         cont_fild.style.outline= "#a04b4b solid 2px";
     }
