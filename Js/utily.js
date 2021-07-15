@@ -69,7 +69,7 @@ email_fild.addEventListener("change",()=>{
         email_fild.style.outline= " #a04b4b solid 2px";
     }
     else if(email_fild.value.length < 10 ){
-        document.getElementById("E-lable").innerHTML=`The minimum length of the subject is 10 character`;
+        document.getElementById("E-lable").innerHTML=`The minimum length of the Email is 10 character`;
         email_fild.style.outline= "#a04b4b solid 2px";
     }
     else{
@@ -114,7 +114,7 @@ cont_fild.addEventListener("change",()=>{
         cont_fild.style.outline= " #a04b4b solid 2px";
     }
     else if(cont_fild.value.length < 100 ){
-        document.getElementById("Cont-lable").innerHTML=`The minimum length of the subject is 100 character`;
+        document.getElementById("Cont-lable").innerHTML=`The minimum length of the Email-content is 100 character`;
         cont_fild.style.outline= "#a04b4b solid 2px";
     }
     else{
