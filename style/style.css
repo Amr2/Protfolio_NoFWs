@@ -516,12 +516,63 @@
   width: 25ch;
 }
 
+.email-oper {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c4c4c485;
+}
+
+.email-oper div {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.email-oper div .state {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.email-oper div .state-desc {
+  line-height: 1.25rem;
+}
+
 #About {
   gap: 50px;
 }
 
 #Project {
   gap: 0;
+}
+
+#contact {
+  position: relative;
 }
 
 #contact form {
@@ -536,6 +587,10 @@
   cursor: pointer;
   background: none !important;
   text-decoration: none !important;
+}
+
+footer {
+  margin: 2rem;
 }
 
 .click {

@@ -8,7 +8,29 @@ let subj_fild  = document.getElementById("Subject");
 let cont_fild  = document.getElementById("Email-cont");
 let sen_btn    = document.getElementById("send-btn");
 let clr_btn    = document.getElementById("clear-btn");
+let emil_cont  = document.getElementById("state-cont");
+let conf_btn   = document.getElementById("conf-state-btn");
 
+
+
+const message_states = (state ,m)=>{
+    emil_cont.style.display = "flex";
+    console.log(state);
+    if(state){
+        emil_cont.children[0].children[0].innerHTML = "Thank you"
+        emil_cont.children[0].children[1].innerHTML = `The Email Have been sent successfully.<br>I will make sure to contact you as soon as possible.`
+    }
+    else{
+        emil_cont.children[0].children[0].innerHTML = "Error"
+        emil_cont.children[0].children[1].innerHTML = `Opps There is Something went Wrong.<br>if the issue with the system.<br>so please Help Me and send the error message<br>vie any of my social accounts Thank you<br> ${m}`
+    }
+}
+
+
+conf_btn.addEventListener("click", ()=>{
+    emil_cont.style.display = "none";
+    console.log("clicked" , emil_cont.style.display)
+})
 
 closebtn.addEventListener("click", ()=> {
     menu.style.left  = "-100%";
@@ -108,13 +130,12 @@ sen_btn.addEventListener("click",()=>{
         Body : cont_fild.value
     }).then(
         (message) =>{
-            alert(message)
+            message == "OK"  ? message_states(true,message) : message_states(false,message); 
             email_fild.value = "";
             subj_fild.value  = "";
             cont_fild.value  = "";
         } 
-    );    
-
+    )
 })
 
 
