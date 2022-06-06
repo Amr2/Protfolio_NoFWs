@@ -47,7 +47,7 @@ D_btn.addEventListener("click", ()=> {
     // a.download = '../assets/CV v3.2.pdf'.split('/').pop()
     // a.click();
     // a.remove();
-    window.open('../assets/cv 6.1.pdf');
+    window.open('../assets/cv 6.2.pdf');
 } );
 
 menubtn.addEventListener("click", ()=>{ 
